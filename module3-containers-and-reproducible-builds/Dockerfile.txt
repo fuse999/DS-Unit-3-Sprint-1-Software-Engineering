@@ -1,0 +1,7 @@
+From Debian
+ENV PYTHONUNBUFFERED=1
+RUN apt-get update && apt-get upgrade -y && \
+apt-get install python3-pip curl nano -y && \
+pip3 install pandas numpy sklearn && \
+pip3 install -i https://test.pypi.org/simple/ lambdata-rileypence && \
+python3 -c "import Lambdata_rileydata;print('success')"
